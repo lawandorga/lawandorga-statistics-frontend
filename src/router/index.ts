@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import DashboardPage from "@/views/DashboardPage.vue";
-import { isAuthenticated } from "./utils";
+import { isAuthenticated, notAuthenticated } from "./utils";
+import StatisticPage from "@/views/StatisticPage.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -13,6 +14,12 @@ const routes: Array<RouteRecordRaw> = [
     path: "/dashboard/",
     name: "dashboard",
     component: DashboardPage,
+    beforeEnter: notAuthenticated,
+  },
+  {
+    path: "/statistic/",
+    name: "statistic",
+    component: StatisticPage,
     beforeEnter: isAuthenticated,
   },
 ];

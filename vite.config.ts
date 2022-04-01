@@ -6,7 +6,7 @@ import { resolve } from "path";
 export default defineConfig({
   plugins: [vue()],
   server: {
-    port: 4200,
+    port: 4300,
   },
   resolve: {
     alias: {
