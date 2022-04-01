@@ -20,7 +20,6 @@ module.exports = {
     parser: "@typescript-eslint/parser",
   },
   plugins: [
-    // "vue",
     // https://github.com/prettier/eslint-plugin-prettier#installation
     "prettier",
   ],

@@ -1,10 +1,10 @@
 import { createApp } from "vue";
 import { setupDefaultAxios } from "./api";
 import App from "./App.vue";
-import "./main.css";
 import router from "./router";
 import store from "./store";
 import axios from "axios";
+import "./main.css";
 
 // vue
 const app = createApp(App);

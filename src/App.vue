@@ -1,5 +1,6 @@
 <template>
   <div>
+    <NavigatonBar v-if="$store.getters['user/isAuthenticated']" />
     <main>
       <router-view />
     </main>
@@ -12,4 +13,5 @@
 
 <script lang="ts" setup>
 import { AlertList } from "@lawandorga/components";
+import NavigatonBar from "./components/NavigatonBar.vue";
 </script>
