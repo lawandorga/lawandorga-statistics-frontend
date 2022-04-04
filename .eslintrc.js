@@ -9,6 +9,8 @@ module.exports = {
   extends: [
     // https://eslint.org/docs/user-guide/getting-started#configuration
     "eslint:recommended",
+    // https://typescript-eslint.io/docs/linting/#configuration
+    "plugin:@typescript-eslint/recommended",
     // https://eslint.vuejs.org/user-guide/#usage
     "plugin:vue/vue3-recommended",
     // https://github.com/prettier/eslint-plugin-prettier#recommended-configuration or https://github.com/prettier/eslint-config-prettier#installation
