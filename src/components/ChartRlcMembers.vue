@@ -1,21 +1,14 @@
 <template>
   <Chart
-    :size="{ width: 500, height: 420 }"
+    :size="{ width: 1600, height: 420 }"
     :data="data"
     :margin="margin"
     :direction="direction"
     :axis="axis"
   >
     <template #layers>
-      <Grid stroke-dasharray="2,2" />
+      <Grid />
       <Bar :data-keys="['name', 'amount']" :bar-style="{ fill: '#90e0ef' }" />
-      <Marker
-        :value="1000"
-        label="Avg."
-        color="#e76f51"
-        :stroke-width="2"
-        stroke-dasharray="6 6"
-      />
     </template>
 
     <template #widgets>
@@ -31,12 +24,12 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-import { Chart, Grid, Bar, Marker, Tooltip } from "vue3-charts";
+import { Chart, Grid, Bar, Tooltip } from "vue3-charts";
 import axios from "axios";
 
 export default defineComponent({
   name: "LineChart",
-  components: { Chart, Grid, Bar, Marker, Tooltip },
+  components: { Chart, Grid, Bar, Tooltip },
   setup() {
     const data = ref([]);
 
