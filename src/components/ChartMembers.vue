@@ -1,30 +1,28 @@
 <template>
-  <div>
-    <BarChart :chart-data="chartData" title="Test"></BarChart>
-  </div>
+  <BarChart :chart-data="chartData" title="Test" />
 </template>
 
 <script lang="ts">
 import { defineComponent, ref, computed } from "vue";
 import { BarChart } from "vue-chart-3";
-import axios from "axios";
 import { Chart, registerables } from "chart.js";
 import getColors from "@/utils/getColors";
+import StatisticService from "@/services/statistic";
 
 Chart.register(...registerables);
 
 export default defineComponent({
   components: { BarChart },
   setup() {
-    const data = ref([]);
+    const data = ref<{ name: string; amount: number }[]>([]);
 
-    axios.get("statistic/rlc_members/").then((d) => (data.value = d.data));
+    StatisticService.getRlcMembers().then((d) => (data.value = d));
 
     const chartData = computed(() => ({
       labels: data.value.map((i) => i.name),
       datasets: [
         {
-          label: "Mitglieder",
+          label: "Members",
           data: data.value.map((i) => i.amount),
           backgroundColor: getColors(1),
         },
