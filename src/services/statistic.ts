@@ -1,4 +1,4 @@
-import { RecordState, RlcMember } from "@/types/statistic";
+import { LcUsage, RecordState, RlcMember } from "@/types/statistic";
 import axios from "axios";
 
 class StatisticService {
@@ -11,6 +11,12 @@ class StatisticService {
   getRecordStates() {
     return axios
       .get<RecordState[]>("statistic/record_states/")
+      .then((response) => response.data);
+  }
+
+  getLcUsage() {
+    return axios
+      .get<LcUsage[]>("statistic/lc_usage/")
       .then((response) => response.data);
   }
 }

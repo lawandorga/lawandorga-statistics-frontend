@@ -6,6 +6,9 @@
     <ChartWrapper title="Different record states" class="col-span-6">
       <ChartRecordStates />
     </ChartWrapper>
+    <ChartWrapper title="Law clinic usage" class="col-span-12">
+      <ChartLcUsage />
+    </ChartWrapper>
   </div>
 </template>
 
@@ -13,4 +16,5 @@
 import ChartMembers from "@/components/ChartMembers.vue";
 import ChartRecordStates from "@/components/ChartRecordStates.vue";
 import ChartWrapper from "@/components/ChartWrapper.vue";
+import ChartLcUsage from "@/components/ChartLcUsage.vue";
 </script>

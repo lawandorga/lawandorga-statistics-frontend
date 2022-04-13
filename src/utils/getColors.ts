@@ -1,9 +1,11 @@
+// see: https://personal.sron.nl/~pault/
+
 const bright = [
   "#4477aa",
-  "#ee6677",
-  "#2288ee",
-  "#ccbb44",
   "#66ccee",
+  "#228833",
+  "#ccbb44",
+  "#ee6677",
   "#aa3377",
   "#bbbbbb",
 ];
