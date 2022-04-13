@@ -39,6 +39,7 @@ const actions = {
           context.commit("setUser", statics.user);
         })
         .catch((error) => {
+          console.log(error);
           throw error.response.data;
         });
     }

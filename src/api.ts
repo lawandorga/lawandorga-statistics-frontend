@@ -86,7 +86,7 @@ export function setupDefaultAxios($axios: AxiosInstance) {
           const next = window.location.pathname;
           store.dispatch("user/logout");
           router.push({
-            name: "user-login",
+            name: "dashboard",
             query: { next: next },
           });
         }
