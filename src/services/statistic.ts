@@ -4,6 +4,7 @@ import {
   RlcMember,
   UserAction,
   UserLogin,
+  UserLoginMonth,
 } from "@/types/statistic";
 import axios from "axios";
 
@@ -35,6 +36,12 @@ class StatisticService {
   getUserLogins() {
     return axios
       .get<UserLogin[]>("statistic/user_logins/")
+      .then((response) => response.data);
+  }
+
+  getUserLoginsMonth() {
+    return axios
+      .get<UserLoginMonth[]>("statistic/user_logins_month/")
       .then((response) => response.data);
   }
 }

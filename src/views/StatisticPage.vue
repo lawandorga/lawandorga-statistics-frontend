@@ -15,6 +15,9 @@
     <ChartWrapper title="User logins per day" class="col-span-12">
       <ChartUserLogins />
     </ChartWrapper>
+    <ChartWrapper title="User logins per month" class="col-span-12">
+      <ChartUserLoginsMonth />
+    </ChartWrapper>
   </div>
 </template>
 
@@ -25,4 +28,5 @@ import ChartWrapper from "@/components/ChartWrapper.vue";
 import ChartLcUsage from "@/components/ChartLcUsage.vue";
 import ChartUserActions from "@/components/ChartUserActions.vue";
 import ChartUserLogins from "@/components/ChartUserLogins.vue";
+import ChartUserLoginsMonth from "@/components/ChartUserLoginsMonth.vue";
 </script>

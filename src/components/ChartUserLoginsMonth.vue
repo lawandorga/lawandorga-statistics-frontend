@@ -8,19 +8,19 @@ import { LineChart } from "vue-chart-3";
 import { Chart, registerables } from "chart.js";
 import getColors from "@/utils/getColors";
 import StatisticService from "@/services/statistic";
-import { UserLogin } from "@/types/statistic";
+import { UserLoginMonth } from "@/types/statistic";
 
 Chart.register(...registerables);
 
 export default defineComponent({
   components: { LineChart },
   setup() {
-    const data = ref<UserLogin[]>([]);
+    const data = ref<UserLoginMonth[]>([]);
 
-    StatisticService.getUserLogins().then((d) => (data.value = d));
+    StatisticService.getUserLoginsMonth().then((d) => (data.value = d));
 
     const chartData = computed(() => ({
-      labels: data.value.map((i) => i.date),
+      labels: data.value.map((i) => i.month),
       datasets: [
         {
           label: "Logins",

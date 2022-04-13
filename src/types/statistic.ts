@@ -24,3 +24,8 @@ export interface UserLogin {
   date: string;
   logins: number;
 }
+
+export interface UserLoginMonth {
+  month: string;
+  logins: number;
+}
