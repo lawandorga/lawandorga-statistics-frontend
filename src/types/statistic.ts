@@ -14,3 +14,13 @@ export interface LcUsage {
   files: number;
   documents: number;
 }
+
+export interface UserAction {
+  email: string;
+  actions: number;
+}
+
+export interface UserLogin {
+  date: string;
+  logins: number;
+}

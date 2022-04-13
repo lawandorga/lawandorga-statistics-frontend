@@ -10,7 +10,9 @@ const bright = [
   "#bbbbbb",
 ];
 
-const getColors = (n: number): string[] => {
+const getColors = (n: number | string): string[] => {
+  if (typeof n === "string") return ["#bbbbbb"];
+
   const ret = [];
 
   for (let i = 0; i < n; i++) {
