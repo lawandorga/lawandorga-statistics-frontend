@@ -1,12 +1,16 @@
 <template>
-  <div class="grid p-4">
-    <div class="p-4 bg-white">
-      <h2 class="text-2xl font-bold">Members in every law clinic</h2>
+  <div class="grid grid-cols-12 gap-4 p-4">
+    <ChartWrapper title="Members in every law clinic" class="col-span-12">
       <ChartMembers />
-    </div>
+    </ChartWrapper>
+    <ChartWrapper title="Different record states" class="col-span-6">
+      <ChartRecordStates />
+    </ChartWrapper>
   </div>
 </template>
 
 <script setup lang="ts">
 import ChartMembers from "@/components/ChartMembers.vue";
+import ChartRecordStates from "@/components/ChartRecordStates.vue";
+import ChartWrapper from "@/components/ChartWrapper.vue";
 </script>
