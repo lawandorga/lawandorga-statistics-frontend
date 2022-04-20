@@ -1,4 +1,5 @@
 import {
+  ErrorMonth,
   LcUsage,
   RecordState,
   RlcMember,
@@ -42,6 +43,12 @@ class StatisticService {
   getUserLoginsMonth() {
     return axios
       .get<UserLoginMonth[]>("statistic/user_logins_month/")
+      .then((response) => response.data);
+  }
+
+  getErrors() {
+    return axios
+      .get<ErrorMonth[]>("statistic/errors_month/")
       .then((response) => response.data);
   }
 }

@@ -29,3 +29,9 @@ export interface UserLoginMonth {
   month: string;
   logins: number;
 }
+
+export interface ErrorMonth {
+  status: number;
+  path: string;
+  count: number;
+}
