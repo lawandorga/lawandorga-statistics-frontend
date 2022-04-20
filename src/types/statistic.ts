@@ -35,3 +35,10 @@ export interface ErrorMonth {
   path: string;
   count: number;
 }
+
+export interface RawNumbers {
+  records: number;
+  users: number;
+  collabs: number;
+  files: number;
+}

@@ -1,5 +1,6 @@
 <template>
   <div class="grid grid-cols-12 gap-4 p-4">
+    <RowRawNumbers class="col-span-12" />
     <ChartWrapper title="Members In Every Law Clinic" class="col-span-12">
       <ChartMembers />
     </ChartWrapper>
@@ -39,4 +40,5 @@ import ChartUserActions from "@/components/ChartUserActions.vue";
 import ChartUserLogins from "@/components/ChartUserLogins.vue";
 import ChartUserLoginsMonth from "@/components/ChartUserLoginsMonth.vue";
 import ChartErrors from "@/components/ChartErrors.vue";
+import RowRawNumbers from "@/components/RowRawNumbers.vue";
 </script>
