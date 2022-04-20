@@ -3,7 +3,10 @@
     <ChartWrapper title="Members in every law clinic" class="col-span-12">
       <ChartMembers />
     </ChartWrapper>
-    <ChartWrapper title="Different record states" class="col-span-6">
+    <ChartWrapper
+      title="Different record states"
+      class="col-span-12 xl:col-span-6"
+    >
       <ChartRecordStates />
     </ChartWrapper>
     <ChartWrapper title="Law clinic usage" class="col-span-12">

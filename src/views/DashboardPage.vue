@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center justify-center w-full min-h-[80vh]">
+  <div class="flex items-center justify-center w-full min-h-[80vh] px-5">
     <div class="w-full max-w-md mx-auto">
       <h1 class="text-3xl font-bold">Login</h1>
       <div class="mt-6">

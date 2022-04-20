@@ -34,14 +34,9 @@ const actions = {
       context.dispatch("refresh");
       context.dispatch("autoRefresh");
       // now truly login if the token is not valid interceptors will redirect to login page anyway
-      return UserService.statics()
-        .then((statics) => {
-          context.commit("setUser", statics.user);
-        })
-        .catch((error) => {
-          console.log(error);
-          throw error.response.data;
-        });
+      return UserService.statics().then((statics) => {
+        context.commit("setUser", statics.user);
+      });
     }
     return;
   },

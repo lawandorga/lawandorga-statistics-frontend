@@ -87,24 +87,26 @@
     <DisclosurePanel class="sm:hidden">
       <div class="pt-2 pb-3 space-y-1">
         <!-- Current: "", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
-        <DisclosureButton
-          :as="RouterLink"
-          :to="{ name: 'statistic' }"
-          class="block py-2 pl-3 pr-4 text-base font-medium text-gray-500 border-l-4 border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700"
-          active-class="!text-blue-700 !border-blue-700 !bg-blue-50"
-        >
-          Statistic
+        <DisclosureButton as="template">
+          <router-link
+            :to="{ name: 'statistic' }"
+            class="block py-2 pl-3 pr-4 text-base font-medium text-gray-500 border-l-4 border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700"
+            active-class="!text-blue-700 !border-blue-700 !bg-blue-50"
+          >
+            Statistic
+          </router-link>
         </DisclosureButton>
       </div>
       <div class="pt-4 pb-3 border-t border-gray-200">
         <div class="mt-3 space-y-1">
-          <DisclosureButton
-            :as="RouterLink"
-            :to="{ name: 'settings' }"
-            class="block py-2 pl-3 pr-4 text-base font-medium text-gray-500 border-l-4 border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700"
-            active-class="!text-blue-700 !border-blue-700 !bg-blue-50"
-          >
-            Settings
+          <DisclosureButton as="template">
+            <router-link
+              :to="{ name: 'settings' }"
+              class="block py-2 pl-3 pr-4 text-base font-medium text-gray-500 border-l-4 border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700"
+              active-class="!text-blue-700 !border-blue-700 !bg-blue-50"
+            >
+              Settings
+            </router-link>
           </DisclosureButton>
           <DisclosureButton
             as="button"
