@@ -26,7 +26,10 @@
       title="Top 20 Error Responses In The Last 30 Days"
       class="col-span-12"
     >
-      <ChartErrors />
+      <TableErrors />
+    </ChartWrapper>
+    <ChartWrapper title="Users With Missing Keys" class="col-span-12">
+      <TableUserErrors />
     </ChartWrapper>
   </div>
 </template>
@@ -39,6 +42,7 @@ import ChartLcUsage from "@/components/ChartLcUsage.vue";
 import ChartUserActions from "@/components/ChartUserActions.vue";
 import ChartUserLogins from "@/components/ChartUserLogins.vue";
 import ChartUserLoginsMonth from "@/components/ChartUserLoginsMonth.vue";
-import ChartErrors from "@/components/ChartErrors.vue";
+import TableErrors from "@/components/TableErrors.vue";
 import RowRawNumbers from "@/components/RowRawNumbers.vue";
+import TableUserErrors from "@/components/TableUserErrors.vue";
 </script>

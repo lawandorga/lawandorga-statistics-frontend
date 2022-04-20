@@ -36,6 +36,14 @@ export interface ErrorMonth {
   count: number;
 }
 
+export interface ErrorUser {
+  email: string;
+  rlckeys: boolean;
+  userkeys: boolean;
+  accepted: boolean;
+  locked: boolean;
+}
+
 export interface RawNumbers {
   records: number;
   users: number;
