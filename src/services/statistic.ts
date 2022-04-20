@@ -11,7 +11,7 @@ import axios from "axios";
 class StatisticService {
   getUserActionsMonth() {
     return axios
-      .get<UserAction[]>("statistic/user_actions_month")
+      .get<UserAction[]>("statistic/user_actions_month/")
       .then((response) => response.data);
   }
 
