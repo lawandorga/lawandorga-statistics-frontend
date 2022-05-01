@@ -51,7 +51,7 @@ export interface RawNumbers {
   files: number;
 }
 
-export interface RecordSex {
+export interface RecordClientValueCount {
   value: string;
   count: number;
 }

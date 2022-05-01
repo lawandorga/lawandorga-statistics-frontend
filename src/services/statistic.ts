@@ -3,7 +3,7 @@ import {
   ErrorUser,
   LcUsage,
   RawNumbers,
-  RecordSex,
+  RecordClientValueCount,
   RecordState,
   RecordTagStats,
   RlcMember,
@@ -75,9 +75,27 @@ class StatisticService {
       .then((response) => response.data);
   }
 
-  getRecordSex() {
+  getRecordClientSex() {
     return axios
-      .get<RecordSex[]>("statistic/record_sex/")
+      .get<RecordClientValueCount[]>("statistic/record_client_sex/")
+      .then((response) => response.data);
+  }
+
+  getRecordClientNationality() {
+    return axios
+      .get<RecordClientValueCount[]>("statistic/record_client_nationality/")
+      .then((response) => response.data);
+  }
+
+  getRecordClientState() {
+    return axios
+      .get<RecordClientValueCount[]>("statistic/record_client_state/")
+      .then((response) => response.data);
+  }
+
+  getRecordClientAge() {
+    return axios
+      .get<RecordClientValueCount[]>("statistic/record_client_age/")
       .then((response) => response.data);
   }
 

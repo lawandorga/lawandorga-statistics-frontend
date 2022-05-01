@@ -1,4 +1,4 @@
-getRecordClientSexRecordClientValueCountgetRecordStates
+RecordClientValueCountgetRecordStates
 <template>
   <PieChart :chart-data="chartData" />
 </template>
@@ -18,7 +18,7 @@ export default defineComponent({
   setup() {
     const data = ref<RecordClientValueCount[]>([]);
 
-    StatisticService.getRecordClientSex().then((d) => (data.value = d));
+    StatisticService.getRecordClientAge().then((d) => (data.value = d));
 
     const chartData = computed(() => ({
       labels: data.value.map((i) => i.value),
