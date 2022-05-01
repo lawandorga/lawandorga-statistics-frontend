@@ -10,6 +10,13 @@
     >
       <ChartRecordStates />
     </ChartWrapper>
+    <ChartWrapper title="Record Client Sex" class="col-span-12 xl:col-span-6">
+      <ChartRecordSex />
+    </ChartWrapper>
+    <ChartWrapper title="Record Tags" class="col-span-12 xl:col-span-6">
+      <ChartRecordTagStats />
+    </ChartWrapper>
+
     <ChartWrapper title="Law Clinic Usage" class="col-span-12">
       <ChartLcUsage />
     </ChartWrapper>
@@ -20,6 +27,9 @@
       <ChartUserLogins />
     </ChartWrapper>
     <ChartWrapper title="User Logins Per Month" class="col-span-12">
+      <ChartUserLoginsMonth />
+    </ChartWrapper>
+    <ChartWrapper title="Unique Users Per Month" class="col-span-12">
       <ChartUserLoginsMonth />
     </ChartWrapper>
     <ChartWrapper
@@ -45,4 +55,7 @@ import ChartUserLoginsMonth from "@/components/ChartUserLoginsMonth.vue";
 import TableErrors from "@/components/TableErrors.vue";
 import RowRawNumbers from "@/components/RowRawNumbers.vue";
 import TableUserErrors from "@/components/TableUserErrors.vue";
+import ChartRecordSex from "@/components/ChartRecordSex.vue";
+import ChartRecordTagStats from "@/components/ChartRecordTagStats.vue";
+import ChartRecordTagExisting from "../components/ChartRecordTagExisting.vue";
 </script>

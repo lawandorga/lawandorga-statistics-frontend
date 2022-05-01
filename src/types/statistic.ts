@@ -50,3 +50,21 @@ export interface RawNumbers {
   collabs: number;
   files: number;
 }
+
+export interface RecordSex {
+  value: string;
+  count: number;
+}
+
+export interface TagCount {
+  tag: string;
+  count: number;
+}
+
+export interface RecordTagStats {
+  tags: TagCount[];
+  state: [
+    { state: "Set"; count: number },
+    { state: "Not-Existing"; count: number },
+  ];
+}
