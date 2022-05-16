@@ -19,7 +19,7 @@
       <ChartUserLoginsMonth />
     </ChartWrapper>
     <ChartWrapper title="Unique Users Per Month" class="col-span-12">
-      <ChartUserLoginsMonth />
+      <ChartUniqueUsersMonth />
     </ChartWrapper>
   </div>
 </template>
@@ -32,4 +32,5 @@ import ChartUserActions from "@/components/ChartUserActions.vue";
 import ChartUserLogins from "@/components/ChartUserLogins.vue";
 import ChartUserLoginsMonth from "@/components/ChartUserLoginsMonth.vue";
 import RowRawNumbers from "@/components/RowRawNumbers.vue";
+import ChartUniqueUsersMonth from "@/components/ChartUniqueUsersMonth.vue";
 </script>
