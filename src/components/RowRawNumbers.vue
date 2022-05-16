@@ -4,7 +4,7 @@
       {{ data.users }}
     </StatisticNumber>
     <StatisticNumber title="Records">
-      {{ data.users }}
+      {{ data.records }}
     </StatisticNumber>
     <StatisticNumber title="Files">
       {{ data.files }}
