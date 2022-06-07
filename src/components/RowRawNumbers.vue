@@ -1,5 +1,8 @@
 <template>
-  <div class="grid gap-4 xl:grid-cols-4">
+  <div class="grid gap-4 xl:grid-cols-5">
+    <StatisticNumber title="Law Clinics">
+      {{ data.lcs }}
+    </StatisticNumber>
     <StatisticNumber title="Users">
       {{ data.users }}
     </StatisticNumber>
@@ -21,7 +24,13 @@ import { ref } from "vue";
 import { RawNumbers } from "@/types/statistic";
 import StatisticNumber from "./StatisticNumber.vue";
 
-const data = ref<RawNumbers>({ records: 0, users: 0, collabs: 0, files: 0 });
+const data = ref<RawNumbers>({
+  records: 0,
+  users: 0,
+  collabs: 0,
+  files: 0,
+  lcs: 0,
+});
 
 StatisticService.getRawNumbers().then((v) => (data.value = v));
 </script>

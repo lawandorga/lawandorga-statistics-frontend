@@ -14,21 +14,21 @@
               class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700"
               active-class="!text-gray-900 !border-blue-700"
             >
-              General Statistic
+              General Statistics
             </router-link>
             <router-link
               :to="{ name: 'statistic-records' }"
               class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700"
               active-class="!text-gray-900 !border-blue-700"
             >
-              Record Statistic
+              Record Statistics
             </router-link>
             <router-link
               :to="{ name: 'statistic-error' }"
               class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700"
               active-class="!text-gray-900 !border-blue-700"
             >
-              Error Statistic
+              Error Statistics
             </router-link>
           </div>
         </div>
@@ -107,7 +107,7 @@
             class="block py-2 pl-3 pr-4 text-base font-medium text-gray-500 border-l-4 border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700"
             active-class="!text-blue-700 !border-blue-700 !bg-blue-50"
           >
-            General Statistic
+            General Statistics
           </router-link>
         </DisclosureButton>
         <DisclosureButton as="template">
@@ -116,7 +116,7 @@
             class="block py-2 pl-3 pr-4 text-base font-medium text-gray-500 border-l-4 border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700"
             active-class="!text-blue-700 !border-blue-700 !bg-blue-50"
           >
-            Record Statistic
+            Record Statistics
           </router-link>
         </DisclosureButton>
         <DisclosureButton as="template">
@@ -125,7 +125,7 @@
             class="block py-2 pl-3 pr-4 text-base font-medium text-gray-500 border-l-4 border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700"
             active-class="!text-blue-700 !border-blue-700 !bg-blue-50"
           >
-            Error Statistic
+            Error Statistics
           </router-link>
         </DisclosureButton>
       </div>

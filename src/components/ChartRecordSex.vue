@@ -1,4 +1,3 @@
-getRecordClientSexRecordClientValueCountgetRecordStates
 <template>
   <PieChart :chart-data="chartData" />
 </template>

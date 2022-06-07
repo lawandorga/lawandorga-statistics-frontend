@@ -49,6 +49,7 @@ export interface RawNumbers {
   users: number;
   collabs: number;
   files: number;
+  lcs: number;
 }
 
 export interface RecordClientValueCount {

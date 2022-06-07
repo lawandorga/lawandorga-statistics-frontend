@@ -17,91 +17,91 @@ import axios from "axios";
 class StatisticService {
   getUserActionsMonth() {
     return axios
-      .get<UserAction[]>("statistic/user_actions_month/")
+      .get<UserAction[]>("statistics/user_actions_month/")
       .then((response) => response.data);
   }
 
   getRlcMembers() {
     return axios
-      .get<RlcMember[]>("statistic/rlc_members/")
+      .get<RlcMember[]>("statistics/rlc_members/")
       .then((response) => response.data);
   }
 
   getRecordStates() {
     return axios
-      .get<RecordState[]>("statistic/record_states/")
+      .get<RecordState[]>("statistics/record_states/")
       .then((response) => response.data);
   }
 
   getLcUsage() {
     return axios
-      .get<LcUsage[]>("statistic/lc_usage/")
+      .get<LcUsage[]>("statistics/lc_usage/")
       .then((response) => response.data);
   }
 
   getUserLogins() {
     return axios
-      .get<UserLogin[]>("statistic/user_logins/")
+      .get<UserLogin[]>("statistics/user_logins/")
       .then((response) => response.data);
   }
 
   getUserLoginsMonth() {
     return axios
-      .get<UserLoginMonth[]>("statistic/user_logins_month/")
+      .get<UserLoginMonth[]>("statistics/user_logins_month/")
       .then((response) => response.data);
   }
 
   getUniqueUsersMonth() {
     return axios
-      .get<UserLoginMonth[]>("statistic/unique_users_month/")
+      .get<UserLoginMonth[]>("statistics/unique_users_month/")
       .then((response) => response.data);
   }
 
   getErrors() {
     return axios
-      .get<ErrorMonth[]>("statistic/errors_month/")
+      .get<ErrorMonth[]>("statistics/errors_month/")
       .then((response) => response.data);
   }
 
   getUserErrors() {
     return axios
-      .get<ErrorUser[]>("statistic/errors_user/")
+      .get<ErrorUser[]>("statistics/errors_user/")
       .then((response) => response.data);
   }
 
   getRawNumbers() {
     return axios
-      .get<RawNumbers>("statistic/raw_numbers/")
+      .get<RawNumbers>("statistics/raw_numbers/")
       .then((response) => response.data);
   }
 
   getRecordClientSex() {
     return axios
-      .get<RecordClientValueCount[]>("statistic/record_client_sex/")
+      .get<RecordClientValueCount[]>("statistics/record_client_sex/")
       .then((response) => response.data);
   }
 
   getRecordClientNationality() {
     return axios
-      .get<RecordClientValueCount[]>("statistic/record_client_nationality/")
+      .get<RecordClientValueCount[]>("statistics/record_client_nationality/")
       .then((response) => response.data);
   }
 
   getRecordClientState() {
     return axios
-      .get<RecordClientValueCount[]>("statistic/record_client_state/")
+      .get<RecordClientValueCount[]>("statistics/record_client_state/")
       .then((response) => response.data);
   }
 
   getRecordClientAge() {
     return axios
-      .get<RecordClientValueCount[]>("statistic/record_client_age/")
+      .get<RecordClientValueCount[]>("statistics/record_client_age/")
       .then((response) => response.data);
   }
 
   getRecordsTagData(): Promise<TagCount[]> {
     return axios
-      .get<RecordTagStats>("statistic/tag_stats/")
+      .get<RecordTagStats>("statistics/tag_stats/")
       .then((response) => {
         const ret = response.data["tags"];
         ret.push({
