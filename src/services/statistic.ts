@@ -11,6 +11,7 @@ import {
   UserLogin,
   UserLoginMonth,
   TagCount,
+  UserWithMissingKeys,
 } from "@/types/statistic";
 import axios from "axios";
 
@@ -110,6 +111,12 @@ class StatisticService {
         });
         return ret;
       });
+  }
+
+  getUsersWithMissingKeys(): Promise<UserWithMissingKeys[]> {
+    return axios
+      .get<UserWithMissingKeys[]>("statistics/users_with_missing_access/")
+      .then((r) => r.data);
   }
 }
 

@@ -30,6 +30,12 @@ export interface UserLoginMonth {
   logins: number;
 }
 
+export interface UserWithMissingKeys {
+  user: number;
+  records: number;
+  access: number;
+}
+
 export interface ErrorMonth {
   status: number;
   path: string;
