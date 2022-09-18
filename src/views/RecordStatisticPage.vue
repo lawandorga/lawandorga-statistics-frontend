@@ -27,6 +27,12 @@
     <ChartWrapper title="Record Client State" class="col-span-12 xl:col-span-6">
       <ChartRecordClientState />
     </ChartWrapper>
+    <ChartWrapper
+      title="Record Record Fields"
+      class="col-span-12 xl:col-span-6"
+    >
+      <ChartRecordFields />
+    </ChartWrapper>
     <ChartWrapper title="Records Open Duration" class="col-span-12">
       <ChartRecordsOpenDuration />
     </ChartWrapper>
@@ -42,4 +48,5 @@ import ChartRecordClientAge from "@/components/ChartRecordClientAge.vue";
 import ChartRecordClientNationality from "@/components/ChartRecordClientNationality.vue";
 import ChartRecordClientState from "@/components/ChartRecordClientState.vue";
 import ChartRecordsOpenDuration from "@/components/ChartRecordsOpenDuration.vue";
+import ChartRecordFields from "@/components/ChartRecordFields.vue";
 </script>

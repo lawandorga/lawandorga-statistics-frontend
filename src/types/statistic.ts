@@ -41,6 +41,11 @@ export interface RecordsClosed {
   count: number;
 }
 
+export interface RecordsField {
+  field: string;
+  amount: number;
+}
+
 export interface ErrorMonth {
   status: number;
   path: string;

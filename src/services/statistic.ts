@@ -13,6 +13,7 @@ import {
   TagCount,
   UserWithMissingKeys,
   RecordsClosed,
+  RecordsField,
 } from "@/types/statistic";
 import axios from "axios";
 
@@ -127,6 +128,12 @@ class StatisticService {
   getRecordsClosedStatistic(): Promise<RecordsClosed[]> {
     return axios
       .get<RecordsClosed[]>("statistics/record/records_closed_statistic/")
+      .then((r) => r.data);
+  }
+
+  getRecordFieldsStatistic(): Promise<RecordsField[]> {
+    return axios
+      .get<RecordsField[]>("statistics/record/record_fields_amount/")
       .then((r) => r.data);
   }
 }
