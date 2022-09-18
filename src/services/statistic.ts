@@ -12,6 +12,7 @@ import {
   UserLoginMonth,
   TagCount,
   UserWithMissingKeys,
+  RecordsClosed,
 } from "@/types/statistic";
 import axios from "axios";
 
@@ -120,6 +121,12 @@ class StatisticService {
       .get<UserWithMissingKeys[]>(
         "statistics/error/users_with_missing_record_keys/",
       )
+      .then((r) => r.data);
+  }
+
+  getRecordsClosedStatistic(): Promise<RecordsClosed[]> {
+    return axios
+      .get<RecordsClosed[]>("statistics/record/records_closed_statistic/")
       .then((r) => r.data);
   }
 }

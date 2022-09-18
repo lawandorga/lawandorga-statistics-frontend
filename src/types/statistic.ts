@@ -36,6 +36,11 @@ export interface UserWithMissingKeys {
   access: number;
 }
 
+export interface RecordsClosed {
+  days: number;
+  count: number;
+}
+
 export interface ErrorMonth {
   status: number;
   path: string;
