@@ -28,7 +28,7 @@
       <ChartRecordClientState />
     </ChartWrapper>
     <ChartWrapper
-      title="Record Record Fields"
+      title="Record Field Name Amounts"
       class="col-span-12 xl:col-span-6"
     >
       <ChartRecordFields />
