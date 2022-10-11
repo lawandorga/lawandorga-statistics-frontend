@@ -39,7 +39,7 @@
               <MenuButton
                 class="flex text-sm bg-gray-100 rounded-full focus:outline-none ring-gray-100 ring-2 hover:ring-gray-200 focus:ring-gray-200 focus:ring-2"
               >
-                <span class="sr-only">Menü öffnen</span>
+                <span class="sr-only">Open user menu</span>
                 <div class="relative overflow-hidden rounded-full h-7 w-7">
                   <UserIcon
                     class="transform scale-110 w-full h-full text-blue-700 absolute -bottom-0.5 left-0 right-0"
