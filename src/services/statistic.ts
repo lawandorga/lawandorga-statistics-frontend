@@ -14,7 +14,9 @@ import {
   UserWithMissingKeys,
   RecordsClosed,
   RecordsField,
+  DynamicStatistic,
 } from "@/types/statistic";
+import { types } from "@lawandorga/components";
 import axios from "axios";
 
 class StatisticService {
@@ -135,6 +137,10 @@ class StatisticService {
     return axios
       .get<RecordsField[]>("statistics/record/record_fields_amount/")
       .then((r) => r.data);
+  }
+
+  getDynamicStatistic(data: types.JsonModel): Promise<DynamicStatistic> {
+    return axios.post("statistics/record/dynamic/", data).then((r) => r.data);
   }
 }
 

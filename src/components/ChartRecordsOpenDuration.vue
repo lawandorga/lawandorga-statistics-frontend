@@ -3,13 +3,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { defineComponent, ref, computed } from "vue";
 import { BarChart } from "vue-chart-3";
 import { Chart, registerables } from "chart.js";
 import getColors from "@/utils/getColors";
 import StatisticService from "@/services/statistic";
 import { RecordsClosed } from "@/types/statistic";
-import { computed } from "@vue/reactivity";
 
 Chart.register(...registerables);
 

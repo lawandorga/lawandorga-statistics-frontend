@@ -85,3 +85,10 @@ export interface RecordTagStats {
     { state: "Not-Existing"; count: number },
   ];
 }
+
+export interface DynamicStatistic {
+  label: string;
+  error: boolean;
+  // eslint-disable-next-line
+  data: any[][];
+}

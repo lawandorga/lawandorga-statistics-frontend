@@ -14,6 +14,6 @@ export const notAuthenticated: NavigationGuard = (to) => {
   if (store.getters["user/isAuthenticated"]) {
     const url = to.query.next as string;
     if (url) return url;
-    else return { name: "statistic" };
+    else return { name: "statistics" };
   }
 };

@@ -1,10 +1,17 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
+import {
+  createRouter,
+  createWebHistory,
+  RouteRecordRaw,
+  RouterView,
+} from "vue-router";
 import DashboardPage from "@/views/DashboardPage.vue";
 import { isAuthenticated, notAuthenticated } from "./utils";
 import StatisticPage from "@/views/StatisticPage.vue";
 import SettingsPage from "@/views/SettingsPage.vue";
-import RecordStatisticPage from "@/views/RecordStatisticPage.vue";
+import RecordStatisticsChartsPage from "@/views/RecordStatisticsChartsPage.vue";
+import RecordStatisticsDynamicPage from "@/views/RecordStatisticsDynamicPage.vue";
 import ErrorStatisticPage from "@/views/ErrorStatisticPage.vue";
+import { h } from "vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -20,20 +27,34 @@ const routes: Array<RouteRecordRaw> = [
     beforeEnter: notAuthenticated,
   },
   {
-    path: "/statistic/",
-    name: "statistic",
+    path: "/statistics/",
+    name: "statistics",
     component: StatisticPage,
     beforeEnter: isAuthenticated,
   },
   {
-    path: "/statistic/records/",
-    name: "statistic-records",
-    component: RecordStatisticPage,
-    beforeEnter: isAuthenticated,
+    path: "/statistics/records/",
+    name: "statistics-records",
+    component: { render: () => h(RouterView) },
+    redirect: { name: "statistics-records-dynamic" },
+    children: [
+      {
+        path: "/statistics/records/charts/",
+        name: "statistics-records-charts",
+        component: RecordStatisticsChartsPage,
+        beforeEnter: isAuthenticated,
+      },
+      {
+        path: "/statistics/records/dynamic/",
+        name: "statistics-records-dynamic",
+        component: RecordStatisticsDynamicPage,
+        beforeEnter: isAuthenticated,
+      },
+    ],
   },
   {
-    path: "/statistic/error/",
-    name: "statistic-error",
+    path: "/statistics/error/",
+    name: "statistics-error",
     component: ErrorStatisticPage,
     beforeEnter: isAuthenticated,
   },

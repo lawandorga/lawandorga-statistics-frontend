@@ -45,7 +45,7 @@ const fields = ref<types.FormField[]>([
 const next = () => {
   const url = route.query.next as string;
   if (url) router.push(url);
-  else router.push({ name: "statistic" });
+  else router.push({ name: "statistics" });
 };
 
 const loginRequest = (data: { email: string; password: string }) => {

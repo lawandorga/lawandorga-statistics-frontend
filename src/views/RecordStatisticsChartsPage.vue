@@ -1,4 +1,12 @@
 <template>
+  <div class="p-4">
+    <router-link :to="{ name: 'statistics-records-dynamic' }">
+      Dynamic
+    </router-link>
+    <router-link :to="{ name: 'statistics-records-charts' }">
+      Charts
+    </router-link>
+  </div>
   <div class="grid grid-cols-12 gap-4 p-4">
     <!-- records -->
     <ChartWrapper

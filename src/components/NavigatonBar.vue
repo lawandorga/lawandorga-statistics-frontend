@@ -5,26 +5,26 @@
       <div class="flex justify-between h-16">
         <div class="flex">
           <div class="flex items-center flex-shrink-0">
-            <LogoLight :to="{ name: 'statistic' }" />
+            <LogoLight :to="{ name: 'statistics' }" />
           </div>
           <div class="hidden sm:ml-20 sm:flex sm:space-x-8">
             <!-- Current: "border-blue-700 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
             <RouterLink
-              :to="{ name: 'statistic' }"
+              :to="{ name: 'statistics' }"
               class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700"
               active-class="!text-gray-900 !border-blue-700"
             >
               General Statistics
             </RouterLink>
             <RouterLink
-              :to="{ name: 'statistic-records' }"
+              :to="{ name: 'statistics-records' }"
               class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700"
               active-class="!text-gray-900 !border-blue-700"
             >
               Record Statistics
             </RouterLink>
             <RouterLink
-              :to="{ name: 'statistic-error' }"
+              :to="{ name: 'statistics-error' }"
               class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700"
               active-class="!text-gray-900 !border-blue-700"
             >
@@ -103,7 +103,7 @@
         <!-- Current: "", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
         <DisclosureButton as="template">
           <RouterLink
-            :to="{ name: 'statistic' }"
+            :to="{ name: 'statistics' }"
             class="block py-2 pl-3 pr-4 text-base font-medium text-gray-500 border-l-4 border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700"
             active-class="!text-blue-700 !border-blue-700 !bg-blue-50"
           >
@@ -112,7 +112,7 @@
         </DisclosureButton>
         <DisclosureButton as="template">
           <RouterLink
-            :to="{ name: 'statistic-records' }"
+            :to="{ name: 'statistics-records' }"
             class="block py-2 pl-3 pr-4 text-base font-medium text-gray-500 border-l-4 border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700"
             active-class="!text-blue-700 !border-blue-700 !bg-blue-50"
           >
@@ -121,7 +121,7 @@
         </DisclosureButton>
         <DisclosureButton as="template">
           <RouterLink
-            :to="{ name: 'statistic-error' }"
+            :to="{ name: 'statistics-error' }"
             class="block py-2 pl-3 pr-4 text-base font-medium text-gray-500 border-l-4 border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700"
             active-class="!text-blue-700 !border-blue-700 !bg-blue-50"
           >
