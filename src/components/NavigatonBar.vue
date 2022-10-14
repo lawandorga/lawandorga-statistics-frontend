@@ -9,27 +9,27 @@
           </div>
           <div class="hidden sm:ml-20 sm:flex sm:space-x-8">
             <!-- Current: "border-blue-700 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
-            <router-link
+            <RouterLink
               :to="{ name: 'statistic' }"
               class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700"
               active-class="!text-gray-900 !border-blue-700"
             >
               General Statistics
-            </router-link>
-            <router-link
+            </RouterLink>
+            <RouterLink
               :to="{ name: 'statistic-records' }"
               class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700"
               active-class="!text-gray-900 !border-blue-700"
             >
               Record Statistics
-            </router-link>
-            <router-link
+            </RouterLink>
+            <RouterLink
               :to="{ name: 'statistic-error' }"
               class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700"
               active-class="!text-gray-900 !border-blue-700"
             >
               Error Statistics
-            </router-link>
+            </RouterLink>
           </div>
         </div>
         <div class="hidden sm:ml-6 sm:flex sm:items-center">
@@ -59,7 +59,7 @@
                 class="absolute right-0 w-48 py-1 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
               >
                 <MenuItem v-slot="{ active }">
-                  <router-link
+                  <RouterLink
                     :to="{ name: 'settings' }"
                     :class="[
                       active ? 'bg-gray-100' : '',
@@ -67,7 +67,7 @@
                     ]"
                   >
                     Settings
-                  </router-link>
+                  </RouterLink>
                 </MenuItem>
                 <MenuItem v-slot="{ active }">
                   <button
@@ -91,8 +91,8 @@
             class="inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none"
           >
             <span class="sr-only">Open main menu</span>
-            <MenuIcon v-if="!open" class="block w-6 h-6" aria-hidden="true" />
-            <XIcon v-else class="block w-6 h-6" aria-hidden="true" />
+            <Bars3Icon v-if="!open" class="block w-6 h-6" aria-hidden="true" />
+            <XMarkIcon v-else class="block w-6 h-6" aria-hidden="true" />
           </DisclosureButton>
         </div>
       </div>
@@ -102,43 +102,43 @@
       <div class="pt-2 pb-3 space-y-1">
         <!-- Current: "", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
         <DisclosureButton as="template">
-          <router-link
+          <RouterLink
             :to="{ name: 'statistic' }"
             class="block py-2 pl-3 pr-4 text-base font-medium text-gray-500 border-l-4 border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700"
             active-class="!text-blue-700 !border-blue-700 !bg-blue-50"
           >
             General Statistics
-          </router-link>
+          </RouterLink>
         </DisclosureButton>
         <DisclosureButton as="template">
-          <router-link
+          <RouterLink
             :to="{ name: 'statistic-records' }"
             class="block py-2 pl-3 pr-4 text-base font-medium text-gray-500 border-l-4 border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700"
             active-class="!text-blue-700 !border-blue-700 !bg-blue-50"
           >
             Record Statistics
-          </router-link>
+          </RouterLink>
         </DisclosureButton>
         <DisclosureButton as="template">
-          <router-link
+          <RouterLink
             :to="{ name: 'statistic-error' }"
             class="block py-2 pl-3 pr-4 text-base font-medium text-gray-500 border-l-4 border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700"
             active-class="!text-blue-700 !border-blue-700 !bg-blue-50"
           >
             Error Statistics
-          </router-link>
+          </RouterLink>
         </DisclosureButton>
       </div>
       <div class="pt-4 pb-3 border-t border-gray-200">
         <div class="mt-3 space-y-1">
           <DisclosureButton as="template">
-            <router-link
+            <RouterLink
               :to="{ name: 'settings' }"
               class="block py-2 pl-3 pr-4 text-base font-medium text-gray-500 border-l-4 border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700"
               active-class="!text-blue-700 !border-blue-700 !bg-blue-50"
             >
               Settings
-            </router-link>
+            </RouterLink>
           </DisclosureButton>
           <DisclosureButton
             as="button"
@@ -163,8 +163,8 @@ import {
   MenuItem,
   MenuItems,
 } from "@headlessui/vue";
-import { MenuIcon, XIcon } from "@heroicons/vue/outline";
-import { UserIcon } from "@heroicons/vue/solid";
+import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
+import { UserIcon } from "@heroicons/vue/20/solid";
 import { LogoLight } from "@lawandorga/components";
 import { useRouter, RouterLink } from "vue-router";
 import { useStore } from "vuex";
