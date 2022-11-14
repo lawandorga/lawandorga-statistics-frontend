@@ -1,23 +1,10 @@
-import { types } from "@lawandorga/components";
-
-export type StatisticUser = types.JsonModel & {
+export type StatisticUser = {
   id: number;
   email: string;
   name: string;
-  user: number;
+  user_id: number;
 };
 
-export type LoginResponse = types.JsonModel & {
-  access: string;
-  refresh: string;
-  user: StatisticUser;
-};
-
-export type RefreshResponse = types.JsonModel & {
-  access: string;
-  refresh: string;
-};
-
-export type StaticsResponse = types.JsonModel & {
+export type DataResponse = {
   user: StatisticUser;
 };

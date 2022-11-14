@@ -1,4 +1,3 @@
-<!-- This example requires Tailwind CSS v2.0+ -->
 <template>
   <Disclosure v-slot="{ open }" as="nav" class="bg-white shadow">
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -167,13 +166,14 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 import { UserIcon } from "@heroicons/vue/20/solid";
 import { LogoLight } from "@lawandorga/components";
 import { useRouter, RouterLink } from "vue-router";
-import { useStore } from "vuex";
+import { useUserStore } from "@/store/user";
 
-const store = useStore();
 const router = useRouter();
+const userStore = useUserStore();
 
 const logout = () => {
-  store.dispatch("user/logout");
-  router.push({ name: "dashboard" });
+  userStore.logout().then(() => {
+    router.push({ name: "dashboard" });
+  });
 };
 </script>

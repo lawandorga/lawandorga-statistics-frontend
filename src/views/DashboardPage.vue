@@ -2,57 +2,44 @@
   <div class="flex items-center justify-center w-full min-h-[80vh] px-5">
     <div class="w-full max-w-md mx-auto">
       <h1 class="text-3xl font-bold">Login</h1>
-      <div class="mt-6">
-        <FormGenerator
-          :fields="fields"
-          :request="loginRequest"
-          submit="Login"
-        />
+      <div v-if="!userStore.isAuthenticated" class="mt-6">
+        <ButtonNormal @click="login()">To the login page</ButtonNormal>
+      </div>
+      <div v-else>
+        <ButtonNormal :to="{ name: 'statistics' }">
+          To the dashboard
+        </ButtonNormal>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import UserService from "@/services/user";
-import { FormGenerator, types } from "@lawandorga/components";
-import { ref } from "vue";
+import { watch } from "vue";
+import { useUserStore } from "@/store/user";
+import { ButtonNormal } from "@lawandorga/components";
 import { useRoute, useRouter } from "vue-router";
-import { LoginResponse } from "@/types/user";
-import { useStore } from "vuex";
 
 const route = useRoute();
 const router = useRouter();
-const store = useStore();
+const userStore = useUserStore();
 
-const fields = ref<types.FormField[]>([
-  {
-    label: "E-Mail",
-    type: "email",
-    name: "email",
-    autocomplete: "email",
-    required: true,
-  },
-  {
-    label: "Password",
-    type: "password",
-    autocomplete: "current-password",
-    name: "password",
-    required: true,
-  },
-]);
-
-const next = () => {
-  const url = route.query.next as string;
-  if (url) router.push(url);
-  else router.push({ name: "statistics" });
+// login
+const login = () => {
+  const path = route.query.next ? route.query.next : "/statistics/";
+  const next = window.location.origin + path;
+  const url = `${import.meta.env.VITE_AUTH_URL}/login/?next=${next}`;
+  window.location.href = url;
 };
 
-const loginRequest = (data: { email: string; password: string }) => {
-  return UserService.login(data).then((loginData: LoginResponse) => {
-    store.dispatch("user/login", loginData);
-    next();
-    return loginData;
-  });
-};
+// if (!userStore.isAuthenticated) login();
+
+// redirect
+watch(userStore, () => {
+  if (userStore.isAuthenticated) {
+    const url = route.query.next as string;
+    if (url) router.push(url);
+    else router.push({ name: "statistics" });
+  }
+});
 </script>
