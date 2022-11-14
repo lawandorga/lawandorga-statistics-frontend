@@ -1,12 +1,5 @@
 <template>
-  <div class="p-4">
-    <router-link :to="{ name: 'statistics-records-dynamic' }">
-      Dynamic
-    </router-link>
-    <router-link :to="{ name: 'statistics-records-charts' }">
-      Charts
-    </router-link>
-  </div>
+  <NavigationBarRecord />
   <div class="grid grid-cols-12 gap-4 p-4">
     <ChartWrapper
       :title="data.label"
@@ -40,6 +33,7 @@ import StatisticService from "@/services/statistic";
 import { ref } from "vue";
 import ChartDynamicBar from "@/components/ChartDynamicBar.vue";
 import { DynamicStatistic } from "@/types/statistic";
+import NavigationBarRecord from "@/components/NavigationBarRecord.vue";
 
 const fields = [
   {

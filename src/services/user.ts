@@ -1,22 +1,14 @@
-import { LoginResponse, RefreshResponse, StaticsResponse } from "@/types/user";
+import { DataResponse } from "@/types/user";
 import axios from "axios";
 
 class UserService {
-  login(data: { email: string; password: string }): Promise<LoginResponse> {
-    return axios
-      .post<LoginResponse>(`statistic_users/login/`, data)
-      .then((response) => response.data);
+  logout(): Promise<void> {
+    return axios.post("/logout/").then();
   }
 
-  refresh(data: { refresh: string }): Promise<RefreshResponse> {
+  data(): Promise<DataResponse> {
     return axios
-      .post<RefreshResponse>(`statistic_users/refresh/`, data)
-      .then((response) => response.data);
-  }
-
-  statics(): Promise<StaticsResponse> {
-    return axios
-      .get<StaticsResponse>(`statistic_users/statics/`)
+      .get<DataResponse>(`statistics_users/data_self/`)
       .then((response) => response.data);
   }
 

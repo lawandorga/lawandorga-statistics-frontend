@@ -15,13 +15,13 @@
 
 <script lang="ts" setup>
 import UserService from "@/services/user";
+import { useUserStore } from "@/store/user";
 import { FormGenerator, types } from "@lawandorga/components";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
-import { useStore } from "vuex";
 
 const router = useRouter();
-const store = useStore();
+const userStore = useUserStore();
 
 const fields = ref<types.FormField[]>([
   {
@@ -50,7 +50,7 @@ const changePasswordRequest = (data: {
   new_password_confirm: string;
 }) => {
   return UserService.changePassword(data).then(() => {
-    store.dispatch("user/logout");
+    userStore.logout();
     router.push({ name: "dashboard" });
     return null;
   });

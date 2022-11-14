@@ -1,12 +1,5 @@
 <template>
-  <div class="p-4">
-    <router-link :to="{ name: 'statistics-records-dynamic' }">
-      Dynamic
-    </router-link>
-    <router-link :to="{ name: 'statistics-records-charts' }">
-      Charts
-    </router-link>
-  </div>
+  <NavigationBarRecord />
   <div class="grid grid-cols-12 gap-4 p-4">
     <!-- records -->
     <ChartWrapper
@@ -57,4 +50,5 @@ import ChartRecordClientNationality from "@/components/ChartRecordClientNational
 import ChartRecordClientState from "@/components/ChartRecordClientState.vue";
 import ChartRecordsOpenDuration from "@/components/ChartRecordsOpenDuration.vue";
 import ChartRecordFields from "@/components/ChartRecordFields.vue";
+import NavigationBarRecord from "@/components/NavigationBarRecord.vue";
 </script>
