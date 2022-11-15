@@ -11,9 +11,9 @@
     "fix": "eslint --fix --ext .js,.vue,.ts ./src"
   },
   "dependencies": {
-    "@headlessui/vue": "^1.4.0",
+    "@headlessui/vue": "^1.7.4",
     "@heroicons/vue": "^2.0.12",
-    "@lawandorga/components": "^1.1.57",
+    "@lawandorga/components": "^1.1.71",
     "@tailwindcss/line-clamp": "^0.4.2",
     "@tailwindcss/typography": "^0.5.0",
     "@types/node": "^18.11.9",
@@ -24,11 +24,11 @@
     "pinia": "^2.0.23",
     "postcss": "^8.3.5",
     "tailwindcss": "^3.0.7",
-    "typescript": "^4.4.3",
-    "vite": "^3.1.8",
+    "typescript": "^4.8.4",
+    "vite": "^3.2.3",
     "vue": "^3.2.16",
     "vue-chart-3": "^3.1.8",
-    "vue-router": "^4.0.12"
+    "vue-router": "^4.1.6"
   },
   "browserslist": [
     "> 1%",
