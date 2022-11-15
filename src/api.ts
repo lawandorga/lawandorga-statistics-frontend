@@ -7,7 +7,7 @@ import { useAlertStore } from "./store/alert";
 export function setupDefaultAxios($axios: AxiosInstance) {
   const alertStore = useAlertStore();
 
-  $axios.defaults.baseURL = import.meta.env.VITE_API_URL as string;
+  $axios.defaults.baseURL = `${import.meta.env.VITE_API_URL}/api/`;
   $axios.defaults.withCredentials = true;
   $axios.defaults.xsrfHeaderName = "x-csrftoken";
   $axios.defaults.xsrfCookieName = "csrftoken";
