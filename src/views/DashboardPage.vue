@@ -31,8 +31,8 @@ else {
     .then(() => {
       next();
     })
-    .catch(() => {
-      login();
+    .catch((error) => {
+      if (error && error.response && error.response.status === 401) login();
     });
 }
 </script>
