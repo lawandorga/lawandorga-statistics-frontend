@@ -5,7 +5,7 @@ import {
   RouterView,
 } from "vue-router";
 import DashboardPage from "@/views/DashboardPage.vue";
-import { isAuthenticated, notAuthenticated } from "./utils";
+import { isAuthenticated } from "./utils";
 import StatisticPage from "@/views/StatisticPage.vue";
 import SettingsPage from "@/views/SettingsPage.vue";
 import RecordStatisticsChartsPage from "@/views/RecordStatisticsChartsPage.vue";
@@ -18,13 +18,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/",
     name: "index",
     redirect: { name: "dashboard" },
-    // component: () => import("@/views/Index.vue"),
   },
   {
     path: "/dashboard/",
     name: "dashboard",
     component: DashboardPage,
-    beforeEnter: notAuthenticated,
   },
   {
     path: "/statistics/",
