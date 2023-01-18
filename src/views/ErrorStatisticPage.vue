@@ -12,12 +12,6 @@
     >
       <TableUserErrors />
     </ChartWrapper>
-    <ChartWrapper
-      title="Users Who Should Have All Record Keys But Do Not"
-      class="col-span-12"
-    >
-      <TableUserWithMissingKeys />
-    </ChartWrapper>
   </div>
 </template>
 
@@ -25,5 +19,4 @@
 import ChartWrapper from "@/components/ChartWrapper.vue";
 import TableErrors from "@/components/TableErrors.vue";
 import TableUserErrors from "@/components/TableUserErrors.vue";
-import TableUserWithMissingKeys from "@/components/TableUserWithMissingKeys.vue";
 </script>
