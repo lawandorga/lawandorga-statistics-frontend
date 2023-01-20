@@ -15,6 +15,7 @@ import {
   RecordsClosed,
   RecordsField,
   DynamicStatistic,
+  MigrationStatistic,
 } from "@/types/statistic";
 import { types } from "@lawandorga/components";
 import axios from "axios";
@@ -125,6 +126,10 @@ class StatisticService {
         "statistics/error/users_with_missing_record_keys/",
       )
       .then((r) => r.data);
+  }
+
+  getMigratedNumbers(): Promise<MigrationStatistic> {
+    return axios.get("statistics/error/migration/").then((r) => r.data);
   }
 
   getRecordsClosedStatistic(): Promise<RecordsClosed[]> {

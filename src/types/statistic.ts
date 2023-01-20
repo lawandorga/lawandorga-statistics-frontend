@@ -36,6 +36,15 @@ export interface UserWithMissingKeys {
   access: number;
 }
 
+export interface MigrationStatistic {
+  records: number;
+  records_togo: number;
+  questionnaires: number;
+  questionnaires_togo: number;
+  documents: number;
+  documents_togo: number;
+}
+
 export interface RecordsClosed {
   days: number;
   count: number;
