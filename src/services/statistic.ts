@@ -65,7 +65,7 @@ class StatisticService {
 
   getErrors() {
     return axios
-      .get<ErrorMonth[]>("statistics/general/errors_month/")
+      .get<ErrorMonth[]>("statistics/error/errors_month/")
       .then((response) => response.data);
   }
 
