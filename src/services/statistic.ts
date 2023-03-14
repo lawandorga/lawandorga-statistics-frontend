@@ -29,7 +29,7 @@ class StatisticService {
 
   getRlcMembers() {
     return axios
-      .get<RlcMember[]>("statistics/general/rlc_members/")
+      .get<RlcMember[]>("statistics/org/rlc_members/")
       .then((response) => response.data);
   }
 
