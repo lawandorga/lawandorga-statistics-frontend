@@ -53,13 +53,13 @@ class StatisticService {
 
   getUserLoginsMonth() {
     return axios
-      .get<UserLoginMonth[]>("statistics/general/user_logins_month/")
+      .get<UserLoginMonth[]>("statistics/org/user_logins_month/")
       .then((response) => response.data);
   }
 
   getUniqueUsersMonth() {
     return axios
-      .get<UserLoginMonth[]>("statistics/general/unique_users_month/")
+      .get<UserLoginMonth[]>("statistics/org/unique_users_month/")
       .then((response) => response.data);
   }
 
