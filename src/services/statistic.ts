@@ -35,7 +35,7 @@ class StatisticService {
 
   getRecordStates() {
     return axios
-      .get<RecordState[]>("statistics/general/record_states/")
+      .get<RecordState[]>("statistics/record/record_states/")
       .then((response) => response.data);
   }
 
@@ -83,7 +83,7 @@ class StatisticService {
 
   getRecordClientSex() {
     return axios
-      .get<RecordClientValueCount[]>("statistics/general/record_client_sex/")
+      .get<RecordClientValueCount[]>("statistics/record/record_client_sex/")
       .then((response) => response.data);
   }
 
