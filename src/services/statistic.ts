@@ -90,7 +90,7 @@ class StatisticService {
   getRecordClientNationality() {
     return axios
       .get<RecordClientValueCount[]>(
-        "statistics/general/record_client_nationality/",
+        "statistics/record/record_client_nationality/",
       )
       .then((response) => response.data);
   }
