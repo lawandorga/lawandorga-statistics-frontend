@@ -97,7 +97,7 @@ class StatisticService {
 
   getRecordClientState() {
     return axios
-      .get<RecordClientValueCount[]>("statistics/general/record_client_state/")
+      .get<RecordClientValueCount[]>("statistics/record/record_client_state/")
       .then((response) => response.data);
   }
 
