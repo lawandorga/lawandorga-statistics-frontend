@@ -109,7 +109,7 @@ class StatisticService {
 
   getRecordsTagData(): Promise<TagCount[]> {
     return axios
-      .get<RecordTagStats>("statistics/general/tag_stats/")
+      .get<RecordTagStats>("statistics/record/tag_stats/")
       .then((response) => {
         const ret = response.data["tags"];
         ret.push({
