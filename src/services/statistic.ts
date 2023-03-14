@@ -41,7 +41,7 @@ class StatisticService {
 
   getLcUsage() {
     return axios
-      .get<LcUsage[]>("statistics/general/lc_usage/")
+      .get<LcUsage[]>("statistics/org/lc_usage/")
       .then((response) => response.data);
   }
 
