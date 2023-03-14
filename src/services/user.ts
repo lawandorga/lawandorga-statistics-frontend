@@ -17,9 +17,7 @@ class UserService {
     new_password: string;
     new_password_confirm: string;
   }): Promise<void> {
-    return axios
-      .post<Promise<void>>("statistic_users/change_password/", data)
-      .then();
+    return axios.post<Promise<void>>("users/change_password/", data).then();
   }
 }
 
