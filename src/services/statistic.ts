@@ -71,7 +71,7 @@ class StatisticService {
 
   getUserErrors() {
     return axios
-      .get<ErrorUser[]>("statistics/general/errors_user/")
+      .get<ErrorUser[]>("statistics/error/errors_user/")
       .then((response) => response.data);
   }
 
