@@ -47,7 +47,7 @@ class StatisticService {
 
   getUserLogins() {
     return axios
-      .get<UserLogin[]>("statistics/general/user_logins/")
+      .get<UserLogin[]>("statistics/org/user_logins/")
       .then((response) => response.data);
   }
 
