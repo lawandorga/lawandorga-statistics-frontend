@@ -103,7 +103,7 @@ class StatisticService {
 
   getRecordClientAge() {
     return axios
-      .get<RecordClientValueCount[]>("statistics/general/record_client_age/")
+      .get<RecordClientValueCount[]>("statistics/record/record_client_age/")
       .then((response) => response.data);
   }
 
