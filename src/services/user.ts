@@ -8,7 +8,7 @@ class UserService {
 
   data(): Promise<DataResponse> {
     return axios
-      .get<DataResponse>(`statistics_users/data_self/`)
+      .get<DataResponse>(`auth/statistics_users/data_self/`)
       .then((response) => response.data);
   }
 
