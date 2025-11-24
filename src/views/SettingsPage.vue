@@ -16,7 +16,7 @@
 <script lang="ts" setup>
 import UserService from "@/services/user";
 import { useUserStore } from "@/store/user";
-import { FormGenerator, types } from "@lawandorga/components";
+import { FormGenerator, types } from "lorga-ui";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 

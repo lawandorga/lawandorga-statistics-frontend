@@ -13,7 +13,6 @@
   "dependencies": {
     "@headlessui/vue": "^1.7.7",
     "@heroicons/vue": "^2.0.12",
-    "@lawandorga/components": "^1.1.71",
     "@tailwindcss/line-clamp": "^0.4.2",
     "@tailwindcss/typography": "^0.5.0",
     "@types/node": "^18.11.9",
@@ -21,6 +20,7 @@
     "autoprefixer": "^10.3.0",
     "axios": "^1.2.2",
     "chart.js": "^3.7.1",
+    "lorga-ui": "==2.*",
     "pinia": "^2.0.23",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.0.7",

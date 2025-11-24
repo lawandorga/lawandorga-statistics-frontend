@@ -28,7 +28,7 @@
 
 <script setup lang="ts">
 import ChartWrapper from "@/components/ChartWrapper.vue";
-import { FormGenerator, types } from "@lawandorga/components";
+import { FormGenerator, types } from "lorga-ui";
 import StatisticService from "@/services/statistic";
 import { ref } from "vue";
 import ChartDynamicBar from "@/components/ChartDynamicBar.vue";
