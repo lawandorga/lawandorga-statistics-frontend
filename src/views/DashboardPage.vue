@@ -1,4 +1,8 @@
-<template><div class="p-2 text-sm">One moment please...</div></template>
+<template>
+  <div class="p-2 text-sm">
+    One moment please...
+  </div>
+</template>
 
 <script lang="ts" setup>
 import { useUserStore } from "@/store/user";

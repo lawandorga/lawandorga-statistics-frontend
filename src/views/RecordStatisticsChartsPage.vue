@@ -8,15 +8,24 @@
     >
       <ChartRecordStates />
     </ChartWrapper>
-    <ChartWrapper title="Record Tags" class="col-span-12 xl:col-span-6">
+    <ChartWrapper
+      title="Record Tags"
+      class="col-span-12 xl:col-span-6"
+    >
       <ChartRecordTagStats />
     </ChartWrapper>
 
     <!-- record client -->
-    <ChartWrapper title="Record Client Sex" class="col-span-12 xl:col-span-6">
+    <ChartWrapper
+      title="Record Client Sex"
+      class="col-span-12 xl:col-span-6"
+    >
       <ChartRecordSex />
     </ChartWrapper>
-    <ChartWrapper title="Record Client Age" class="col-span-12 xl:col-span-6">
+    <ChartWrapper
+      title="Record Client Age"
+      class="col-span-12 xl:col-span-6"
+    >
       <ChartRecordClientAge />
     </ChartWrapper>
     <ChartWrapper
@@ -25,7 +34,10 @@
     >
       <ChartRecordClientNationality />
     </ChartWrapper>
-    <ChartWrapper title="Record Client State" class="col-span-12 xl:col-span-6">
+    <ChartWrapper
+      title="Record Client State"
+      class="col-span-12 xl:col-span-6"
+    >
       <ChartRecordClientState />
     </ChartWrapper>
     <ChartWrapper
@@ -34,7 +46,10 @@
     >
       <ChartRecordFields />
     </ChartWrapper>
-    <ChartWrapper title="Records Open Duration" class="col-span-12">
+    <ChartWrapper
+      title="Records Open Duration"
+      class="col-span-12"
+    >
       <ChartRecordsOpenDuration />
     </ChartWrapper>
   </div>

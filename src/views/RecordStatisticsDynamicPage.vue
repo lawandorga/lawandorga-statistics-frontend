@@ -15,10 +15,16 @@
           />
         </div>
       </div>
-      <div v-if="data.data" class="pt-8">
+      <div
+        v-if="data.data"
+        class="pt-8"
+      >
         <ChartDynamicBar :data="data" />
       </div>
-      <p v-if="data.error" class="mt-5 font-bold text-red-700">
+      <p
+        v-if="data.error"
+        class="mt-5 font-bold text-red-700"
+      >
         There is an error in the statistic it might show wrong results. You
         should consult it@law-orga.de to have it checked.
       </p>

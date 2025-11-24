@@ -6,7 +6,7 @@
       { name: 'Records', key: 'records' },
       { name: 'Access', key: 'access' },
     ]"
-  ></TableGenerator>
+  />
 </template>
 
 <script lang="ts" setup>
