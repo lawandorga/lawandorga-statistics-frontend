@@ -36,6 +36,10 @@
     "not dead"
   ],
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.17"
+    "@tailwindcss/postcss": "^4.1.17",
+    "@typescript-eslint/eslint-plugin": "^8.47.0",
+    "@typescript-eslint/parser": "^8.47.0",
+    "eslint": "^9.39.1",
+    "eslint-plugin-vue": "^10.6.0"
   }
 }
