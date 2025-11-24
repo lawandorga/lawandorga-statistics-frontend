@@ -164,7 +164,6 @@ import {
 } from "@headlessui/vue";
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 import { UserIcon } from "@heroicons/vue/20/solid";
-import { LogoLight } from "@lawandorga/components";
 import { useRouter, RouterLink } from "vue-router";
 import { useUserStore } from "@/store/user";
 
