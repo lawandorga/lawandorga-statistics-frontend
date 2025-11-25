@@ -17,7 +17,7 @@ import {
   DynamicStatistic,
   MigrationStatistic,
 } from "@/types/statistic";
-import { types } from "@lawandorga/components";
+import { types } from "lorga-ui";
 import axios from "axios";
 
 class StatisticService {

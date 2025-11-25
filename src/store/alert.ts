@@ -1,4 +1,4 @@
-import { types } from "@lawandorga/components";
+import { types } from "lorga-ui";
 import { AlertState } from "@/types/state";
 import { defineStore } from "pinia";
 

@@ -1,4 +1,4 @@
-const lawandorga = require("@lawandorga/components");
+import lawandorga from 'lorga-ui';
 
 const content = ["index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"];
 

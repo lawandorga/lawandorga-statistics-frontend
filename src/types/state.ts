@@ -1,4 +1,4 @@
-import { types } from "@lawandorga/components";
+import { types } from "lorga-ui";
 import { StatisticUser } from "./user";
 
 export interface AlertState {
