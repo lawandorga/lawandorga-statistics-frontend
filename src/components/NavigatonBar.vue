@@ -7,13 +7,9 @@
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
       <div class="flex justify-between h-16">
         <div class="flex">
-<<<<<<< HEAD
           <div class="flex items-center flex-shrink-0">
             <LogoLight :to="{ name: 'statistics' }" />
           </div>
-=======
-          <div class="flex items-center flex-shrink-0" />
->>>>>>> e2a8aff (Fix linting)
           <div class="hidden sm:ml-20 sm:flex sm:space-x-8">
             <!-- Current: "border-blue-700 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
             <RouterLink
