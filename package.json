@@ -1,6 +1,7 @@
 {
   "name": "lawandorga-statistics",
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "npm run build:production",
@@ -36,10 +37,10 @@
     "not dead"
   ],
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
     "@tailwindcss/postcss": "^4.1.17",
-    "@typescript-eslint/eslint-plugin": "^8.48.0",
-    "@typescript-eslint/parser": "^8.48.0",
-    "eslint": "^9.39.1",
-    "eslint-plugin-vue": "^10.6.0"
+    "@typescript-eslint/parser": "==8.45.*",
+    "eslint": "==9.*",
+    "eslint-plugin-vue": "==10.5.*"
   }
 }
