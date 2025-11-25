@@ -1,5 +1,9 @@
 <template>
-  <Disclosure v-slot="{ open }" as="nav" class="bg-white shadow">
+  <Disclosure
+    v-slot="{ open }"
+    as="nav"
+    class="bg-white shadow"
+  >
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
       <div class="flex justify-between h-16">
         <div class="flex">
@@ -33,7 +37,10 @@
         </div>
         <div class="hidden sm:ml-6 sm:flex sm:items-center">
           <!-- Profile dropdown -->
-          <Menu as="div" class="relative ml-3">
+          <Menu
+            as="div"
+            class="relative ml-3"
+          >
             <div>
               <MenuButton
                 class="flex text-sm bg-gray-100 rounded-full focus:outline-none ring-gray-100 ring-2 hover:ring-gray-200 focus:ring-gray-200 focus:ring-2"
@@ -90,8 +97,16 @@
             class="inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none"
           >
             <span class="sr-only">Open main menu</span>
-            <Bars3Icon v-if="!open" class="block w-6 h-6" aria-hidden="true" />
-            <XMarkIcon v-else class="block w-6 h-6" aria-hidden="true" />
+            <Bars3Icon
+              v-if="!open"
+              class="block w-6 h-6"
+              aria-hidden="true"
+            />
+            <XMarkIcon
+              v-else
+              class="block w-6 h-6"
+              aria-hidden="true"
+            />
           </DisclosureButton>
         </div>
       </div>
@@ -164,7 +179,6 @@ import {
 } from "@headlessui/vue";
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 import { UserIcon } from "@heroicons/vue/20/solid";
-import { LogoLight } from "@lawandorga/components";
 import { useRouter, RouterLink } from "vue-router";
 import { useUserStore } from "@/store/user";
 

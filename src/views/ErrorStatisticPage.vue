@@ -20,10 +20,10 @@
         <template #default="{ data }">
           Records: {{ data.records.toFixed(2) }} and
           {{ data.records_togo }} togo.
-          <br />
+          <br>
           Questionnaires: {{ data.questionnaires.toFixed(2) }} and
           {{ data.questionnaires_togo }} togo.
-          <br />
+          <br>
           Documents: {{ data.documents.toFixed(2) }} and
           {{ data.documents_togo }} togo.
         </template>

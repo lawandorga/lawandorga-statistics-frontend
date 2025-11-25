@@ -1,7 +1,9 @@
 <template>
   <div class="flex items-center justify-center w-full min-h-[80vh] px-5">
     <div class="w-full max-w-md mx-auto">
-      <h1 class="text-3xl font-bold">Change Password</h1>
+      <h1 class="text-3xl font-bold">
+        Change Password
+      </h1>
       <div class="mt-6">
         <FormGenerator
           :fields="fields"
@@ -16,7 +18,7 @@
 <script lang="ts" setup>
 import UserService from "@/services/user";
 import { useUserStore } from "@/store/user";
-import { FormGenerator, types } from "@lawandorga/components";
+import { FormGenerator, types } from "lorga-ui";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 

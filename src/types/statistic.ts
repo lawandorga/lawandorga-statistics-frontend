@@ -98,6 +98,6 @@ export interface RecordTagStats {
 export interface DynamicStatistic {
   label: string;
   error: boolean;
-  // eslint-disable-next-line
+   
   data: any[][] | null;
 }

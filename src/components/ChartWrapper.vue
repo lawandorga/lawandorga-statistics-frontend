@@ -1,6 +1,8 @@
 <template>
   <div class="p-4 bg-white">
-    <h2 class="text-2xl font-bold">{{ title }}</h2>
+    <h2 class="text-2xl font-bold">
+      {{ title }}
+    </h2>
     <div class="mt-4">
       <slot />
     </div>

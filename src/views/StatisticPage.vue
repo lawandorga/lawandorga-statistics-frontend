@@ -3,22 +3,40 @@
     <RowRawNumbers class="col-span-12" />
 
     <!-- usage -->
-    <ChartWrapper title="Members In Every Law Clinic" class="col-span-12">
+    <ChartWrapper
+      title="Members In Every Law Clinic"
+      class="col-span-12"
+    >
       <ChartMembers />
     </ChartWrapper>
-    <ChartWrapper title="Law Clinic Usage" class="col-span-12">
+    <ChartWrapper
+      title="Law Clinic Usage"
+      class="col-span-12"
+    >
       <ChartLcUsage />
     </ChartWrapper>
-    <ChartWrapper title="User Actions In The Last 30 Days" class="col-span-12">
+    <ChartWrapper
+      title="User Actions In The Last 30 Days"
+      class="col-span-12"
+    >
       <ChartUserActions />
     </ChartWrapper>
-    <ChartWrapper title="User Logins Per Day" class="col-span-12">
+    <ChartWrapper
+      title="User Logins Per Day"
+      class="col-span-12"
+    >
       <ChartUserLogins />
     </ChartWrapper>
-    <ChartWrapper title="User Logins Per Month" class="col-span-12">
+    <ChartWrapper
+      title="User Logins Per Month"
+      class="col-span-12"
+    >
       <ChartUserLoginsMonth />
     </ChartWrapper>
-    <ChartWrapper title="Unique Users Per Month" class="col-span-12">
+    <ChartWrapper
+      title="Unique Users Per Month"
+      class="col-span-12"
+    >
       <ChartUniqueUsersMonth />
     </ChartWrapper>
   </div>

@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts" setup>
-import { AlertList } from "@lawandorga/components";
+import { AlertList } from "lorga-ui";
 import NavigatonBar from "./components/NavigatonBar.vue";
 import { useAlertStore } from "./store/alert";
 import { useUserStore } from "./store/user";
