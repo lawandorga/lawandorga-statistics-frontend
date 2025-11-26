@@ -3,8 +3,6 @@ name: Deployment Stage
 on:
   workflow_call:
     secrets:
-      SONAR_TOKEN:
-        required: true
       SCW_ACCESS_KEY:
         required: true
       SCW_PROJECT_ID:
