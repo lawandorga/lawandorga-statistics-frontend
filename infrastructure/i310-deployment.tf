@@ -1,0 +1,52 @@
+resource "kubernetes_deployment_v1" "deployment" {
+  metadata {
+    name = var.name
+    labels = {
+      app = var.name
+    }
+  }
+
+  spec {
+    replicas = 2
+
+    selector {
+      match_labels = {
+        app = var.name
+      }
+    }
+
+    template {
+      metadata {
+        labels = {
+          app = var.name
+        }
+      }
+
+      spec {
+        image_pull_secrets {
+          name = data.terraform_remote_state.cluster.outputs.image_pull_secret_name
+        }
+
+        container {
+          image = "${data.terraform_remote_state.cluster.outputs.registry_endpoint}/${var.name}:${var.image_version}"
+          name  = "${var.name}-container"
+
+
+          port {
+            container_port = 8080
+          }
+
+          readiness_probe {
+            http_get {
+              port = 8080
+              http_header {
+                name  = "Host"
+                value = "statistics.law-orga.de"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

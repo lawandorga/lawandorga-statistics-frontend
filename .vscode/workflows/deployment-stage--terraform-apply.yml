@@ -1,0 +1,42 @@
+name: Deployment Stage - Deploy Frontend
+
+on:
+  workflow_call:
+    secrets:
+      scw_access_key:
+        required: true
+      scw_secret_key:
+        required: true
+      scw_project_id:
+        required: true
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-22.04
+
+    env:
+      TF_VAR_scw_access_key: ${{ secrets.scw_access_key }}
+      TF_VAR_scw_secret_key: ${{ secrets.scw_secret_key }}
+      TF_VAR_scw_project_id: ${{ secrets.scw_project_id }}
+      TF_VAR_image_version: ${{ github.sha }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup AWS Credentials
+        run: |
+          aws configure set aws_access_key_id $TF_VAR_scw_access_key --profile lawandorga
+          aws configure set aws_secret_access_key $TF_VAR_scw_secret_key --profile lawandorga
+
+      - name: Set Up Terraform
+        uses: hashicorp/setup-terraform@v3
+        with: 
+          terraform_version: 1.9.7
+
+      - name: Terraform Apply
+        run: |
+          cd infrastructure/
+          terraform init
+          terraform apply --auto-approve -input=false
