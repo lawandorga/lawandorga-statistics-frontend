@@ -1,6 +1,6 @@
 resource "kubernetes_service_v1" "service" {
   metadata {
-    name = "${var.name}"
+    name = var.name
   }
   spec {
     selector = {
