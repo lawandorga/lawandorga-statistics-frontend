@@ -19,7 +19,7 @@
     "@vitejs/plugin-vue": "==6.0.*",
     "autoprefixer": "==10.4.*",
     "axios": "==1.12.*",
-    "chart.js": "^3.7.1",
+    "chart.js": "^4.5.1",
     "lorga-ui": "==2.*",
     "pinia": "^3.0.4",
     "postcss": "==8.5.*",
