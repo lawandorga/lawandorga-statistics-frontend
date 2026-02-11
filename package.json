@@ -18,7 +18,7 @@
     "@types/node": "==24.3.*",
     "@vitejs/plugin-vue": "==6.0.*",
     "autoprefixer": "==10.4.*",
-    "axios": "==1.12.*",
+    "axios": "==1.13.*",
     "chart.js": "^3.7.1",
     "lorga-ui": "==2.*",
     "pinia": "^3.0.4",
